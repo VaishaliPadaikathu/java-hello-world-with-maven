@@ -13,12 +13,7 @@
            <maven.compiler.source>1.6</maven.compiler.source>
            <maven.compiler.target>1.6</maven.compiler.target>
      </properties>
- <distributionManagement>
-   <snapshotRepository>
-      <id>nexus-snapshots</id>
-      <url>http://localhost:8081/nexus/content/repositories/snapshots</url>
-   </snapshotRepository>
-  </distributionManagement>
+
       <dependencies>
            <dependency>
                <groupId>joda-time</groupId>
@@ -27,7 +22,12 @@
            </dependency>
        </dependencies>
        <!-- end::joda[] -->
-       
+        <distributionManagement>
+   <snapshotRepository>
+      <id>nexus-snapshots</id>
+      <url>http://localhost:8081/nexus/content/repositories/snapshots</url>
+   </snapshotRepository>
+  </distributionManagement>
     <build>
         <plugins>
             <plugin>
